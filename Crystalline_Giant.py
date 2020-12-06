@@ -30,11 +30,13 @@ abilities = {
 abilities_list = []
 
 #function for finding an ability that hasnt been found yet and adding it to abilities_list
-def ability_counters():
-	
-	choice = random.randint(1, 10)
+def ability_counters():	
+	numbers = list(range(1, 11))
+	choice = random.choice(numbers)
+
 	if abilities[choice] not in abilities_list:
 		abilities_list.append(abilities[choice])
+				
 	return abilities_list
 
 #main loop of the program
