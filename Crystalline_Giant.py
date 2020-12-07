@@ -15,28 +15,32 @@ window = sg.Window("Crystalline Giant Counters", layout)
 
 #dictionary of  abilities of the card crystalline giant
 abilities = {
-        1: "Flying",
-        2: "First strike",
-        3: "Deathtouch",
-        4: "Hexproof",
-        5: "Lifelink",
-        6: "Menace",
-        7: "Reach",
-        8: "Trample",
-        9: "Vigilance",
-        10: "+1/+1"
-        }
+		1: "Flying",
+		2: "First strike",
+		3: "Deathtouch",
+		4: "Hexproof",
+		5: "Lifelink",
+		6: "Menace",
+		7: "Reach",
+		8: "Trample",
+		9: "Vigilance",
+		10: "+1/+1"
+		}
 
 abilities_list = []
 
 #function for finding an ability that hasnt been found yet and adding it to abilities_list
-def ability_counters():	
-	numbers = list(range(1, 11))
-	choice = random.choice(numbers)
+numbers = list(range(1, 11))
 
-	if abilities[choice] not in abilities_list:
-		abilities_list.append(abilities[choice])
-				
+def ability_counters():	
+
+	if numbers:
+		choice = random.choice(numbers)
+
+		if abilities[choice] not in abilities_list:
+				abilities_list.append(abilities[choice])
+				numbers.remove(choice)
+
 	return abilities_list
 
 #main loop of the program
