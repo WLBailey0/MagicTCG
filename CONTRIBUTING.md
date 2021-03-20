@@ -1,0 +1,1 @@
+MTG is for everyone, and so is this repository. If you would like to contribute to a app or add your own feel free to fork. If you would like to be an author on this repo email me at wlbailey0@gmail.com and I'll add you. 
